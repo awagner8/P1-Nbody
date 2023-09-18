@@ -98,38 +98,58 @@ public class CelestialBody {
 	 * @return distance between this body and b
 	 */
 	public double calcDistance(CelestialBody b) {
-		// TODO: complete method
-		return 0.0;
+		
+		return Math.sqrt(Math.pow((b.getX() - this.getX()), 2) + Math.pow((b.getY() - this.getY()), 2));
 	}
 
 	public double calcForceExertedBy(CelestialBody b) {
-		// TODO: complete method
-		return 0.0;
+		
+		return ((6.67*1e-11)*(this.getMass()*b.getMass())/(Math.pow(this.calcDistance(b), 2)));
 	}
 
 	public double calcForceExertedByX(CelestialBody b) {
-		// TODO: complete method
-		return 0.0;
+		
+		return ((this.calcForceExertedBy(b)*(b.getX() - this.getX()))/this.calcDistance(b));
 	}
 	public double calcForceExertedByY(CelestialBody b) {
-		// TODO: complete method
-		return 0.0;
+		
+		return ((this.calcForceExertedBy(b)*(b.getY() - this.getY()))/this.calcDistance(b));
 	}
 
 	public double calcNetForceExertedByX(CelestialBody[] bodies) {
 		// TODO: complete method
 		double sum = 0.0;
+		for(int i = 0; i < bodies.length; i++) {
+			if(!bodies[i].equals(this)) {
+				sum += this.calcForceExertedByX(bodies[i]);
+			}
+		}
 		return sum;
 	}
 
 	public double calcNetForceExertedByY(CelestialBody[] bodies) {
 		double sum = 0.0;
+		for(int i = 0; i < bodies.length; i++) {
+			if(!bodies[i].equals(this)) {
+				sum += this.calcForceExertedByY(bodies[i]);
+			}
+		}
 		return sum;
 	}
 
 	public void update(double deltaT, 
 			           double xforce, double yforce) {
-		// TODO: complete method
+		double Ax = xforce/this.getMass();
+		double Ay = yforce/this.getMass();
+		double nvx = this.getXVel() + deltaT*Ax;
+		double nvy = this.getYVel() + deltaT*Ay;
+		double nx = this.getX() + deltaT*nvx;
+		double ny = this.getY() + deltaT*nvy;
+		this.myXPos = nx;
+		this.myYPos = ny;
+		this.myXVel = nvx;
+		this.myYVel = nvy;
+		
 	}
 
 	/**

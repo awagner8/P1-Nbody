@@ -30,7 +30,7 @@ public class TestReadRadius {
      */
     private static void checkReadRadius() throws FileNotFoundException {
         System.out.println("Checking readRadius...");
-        String planetsTxtPath = "./data/planets.txt";
+        String planetsTxtPath = "/Users/swagner/Documents/Duke Fall '23/CS 201/Projects/p1-nbody-full/data/planets.txt";
         /* If the following line fails to compile, you probably need to make
          * a certain method static! */
         double actualOutput = NBody.readRadius(planetsTxtPath);
