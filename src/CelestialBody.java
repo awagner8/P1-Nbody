@@ -7,7 +7,7 @@
  * @author ola
  *
  * If you add code here, add yourself as @author below
- *
+ * @author Avi Wagner
  *
  */
 public class CelestialBody {
@@ -30,8 +30,13 @@ public class CelestialBody {
 	 */
 	public CelestialBody(double xp, double yp, double xv,
 			             double yv, double mass, String filename){
-		// TODO: complete constructor
-
+							myXPos = xp;
+							myYPos = yp;
+							myXVel = xv;
+							myYVel = yv;
+							myMass = mass;
+							myFileName = filename;
+			
 	}
 
 	/**
@@ -40,7 +45,7 @@ public class CelestialBody {
 	 */
 	public double getX() {
 		// TODO: complete method
-		return 0.0;
+		return myXPos;
 	}
 
 	/**
@@ -49,7 +54,7 @@ public class CelestialBody {
 	 */
 	public double getY() {
 		// TODO: complete method
-		return 0.0;
+		return myYPos;
 	}
 
 	/**
@@ -58,7 +63,7 @@ public class CelestialBody {
 	 */
 	public double getXVel() {
 		// TODO: complete method
-		return 0.0;
+		return myXVel;
 	}
 	/**
 	 * Return y-velocity of this Body.
@@ -66,7 +71,7 @@ public class CelestialBody {
 	 */
 	public double getYVel() {
 		// TODO: complete method
-		return 0.0;
+		return myYVel;
 	}
 
 	/**
@@ -75,7 +80,7 @@ public class CelestialBody {
 	 */
 	public double getMass() {
 		// TODO: complete method
-		return 5.0;
+		return myMass;
 	}
 
 	/**
@@ -84,7 +89,7 @@ public class CelestialBody {
 	 */
 	public String getName() {
 		// TODO: complete method
-		return "cow-planet";
+		return myFileName;
 	}
 
 	/**
