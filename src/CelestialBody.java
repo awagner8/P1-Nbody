@@ -12,7 +12,7 @@
  */
 public class CelestialBody {
 
-	private double myXPos;
+	private double myXPos; 
 	private double myYPos;
 	private double myXVel;
 	private double myYVel;
@@ -149,7 +149,7 @@ public class CelestialBody {
 		this.myYPos = ny;
 		this.myXVel = nvx;
 		this.myYVel = nvy;
-		
+
 	}
 
 	/**

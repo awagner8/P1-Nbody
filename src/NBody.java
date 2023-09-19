@@ -90,7 +90,7 @@ public class NBody {
 
 		StdDraw.enableDoubleBuffering();
 		StdDraw.setScale(-radius, radius);
-		StdDraw.picture(0,0,"images/starfield.jpg");
+		StdDraw.picture(0,0,"/Users/swagner/Documents/Duke Fall '23/CS 201/Projects/p1-nbody-full/images/starfield.jpg");
 
 		// run simulation until over
 
@@ -121,7 +121,7 @@ public class NBody {
 			}
 
 			StdDraw.clear();
-			StdDraw.picture(0,0,"images/starfield.jpg");
+			StdDraw.picture(0,0,"/Users/swagner/Documents/Duke Fall '23/CS 201/Projects/p1-nbody-full/images/starfield.jpg");
 			
 			// TODO: loop over all bodies and call draw on each one
 
